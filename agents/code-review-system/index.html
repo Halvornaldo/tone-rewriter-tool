@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Review & Documentation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Code Review & Documentation System</h1>
+            <p>Paste your code below for multi-agent analysis</p>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <h2>Code Input</h2>
+                <div class="language-selector">
+                    <label for="language">Language:</label>
+                    <select id="language">
+                        <option value="javascript">JavaScript</option>
+                        <option value="python">Python</option>
+                        <option value="java">Java</option>
+                        <option value="cpp">C++</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <textarea id="code-input" placeholder="Paste your code here..." rows="15"></textarea>
+                <button id="analyze-btn" class="primary-btn">
+                    <span class="btn-text">Analyze Code</span>
+                    <div class="spinner hidden"></div>
+                </button>
+            </section>
+
+            <section id="results-section" class="results-section hidden">
+                <h2>Analysis Results</h2>
+                
+                <div class="result-tabs">
+                    <button class="tab-btn active" data-tab="overview">Overview</button>
+                    <button class="tab-btn" data-tab="review">Code Review</button>
+                    <button class="tab-btn" data-tab="learning">Learning Points</button>
+                    <button class="tab-btn" data-tab="documentation">Documentation</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="overview" class="tab-panel active">
+                        <h3>Overview</h3>
+                        <div class="overview-content"></div>
+                    </div>
+                    
+                    <div id="review" class="tab-panel">
+                        <h3>Code Review</h3>
+                        <div class="review-content"></div>
+                    </div>
+                    
+                    <div id="learning" class="tab-panel">
+                        <h3>Learning Points</h3>
+                        <div class="learning-content"></div>
+                    </div>
+                    
+                    <div id="documentation" class="tab-panel">
+                        <h3>Generated Documentation</h3>
+                        <div class="documentation-content"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="example-section">
+                <h3>Try an Example</h3>
+                <button id="load-example" class="secondary-btn">Load Example Code</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Powered by multiple AI agents working together</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
