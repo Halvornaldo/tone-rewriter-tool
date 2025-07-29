@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Color Palette - Deep Blue */
+  --color-primary-50: 239 246 255;
+  --color-primary-100: 219 234 254;
+  --color-primary-200: 191 219 254;
+  --color-primary-300: 147 197 253;
+  --color-primary-400: 96 165 250;
+  --color-primary-500: 59 130 246;
+  --color-primary-600: 37 99 235;
+  --color-primary-700: 29 78 216;
+  --color-primary-800: 30 64 175;
+  --color-primary-900: 30 58 138;
+  --color-primary-950: 23 37 84;
+
+  /* Accent Color Palette - Complementary Orange */
+  --color-accent-50: 255 251 235;
+  --color-accent-100: 254 243 199;
+  --color-accent-200: 253 230 138;
+  --color-accent-300: 252 211 77;
+  --color-accent-400: 251 191 36;
+  --color-accent-500: 245 158 11;
+  --color-accent-600: 217 119 6;
+  --color-accent-700: 180 83 9;
+  --color-accent-800: 146 64 14;
+  --color-accent-900: 120 53 15;
+  --color-accent-950: 69 26 3;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  h1 {
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold;
+  }
+  
+  h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-semibold;
+  }
+  
+  h3 {
+    @apply text-xl sm:text-2xl lg:text-3xl font-semibold;
+  }
+  
+  p {
+    @apply text-base sm:text-lg leading-relaxed;
+  }
+}
+
+@layer components {
+  .prose-custom {
+    @apply prose prose-lg prose-gray max-w-none;
+    @apply prose-headings:text-gray-900 prose-headings:font-semibold;
+    @apply prose-p:text-gray-700 prose-p:leading-relaxed;
+    @apply prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline;
+    @apply prose-strong:text-gray-900 prose-strong:font-semibold;
+    @apply prose-code:text-primary-600 prose-code:bg-primary-50 prose-code:px-1 prose-code:py-0.5 prose-code:rounded;
+    @apply prose-pre:bg-gray-900 prose-pre:text-gray-100;
+    @apply prose-blockquote:border-primary-200 prose-blockquote:text-gray-700;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 hover:shadow-xl transition-shadow duration-300;
+  }
+  
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent;
+  }
+}
+
+/* Custom focus styles for better accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
