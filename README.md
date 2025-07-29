@@ -41,8 +41,9 @@ python main.py
 ## 📚 Projects
 
 ### AI Text Tools
-- **tone-rewriter.html** - English AI-powered text tone transformation tool
-- **tone-rewriter-norwegian.html** - Norwegian AI-powered text tone transformation tool (Toneomskriver)
+- **tone-rewriter/** - AI-powered text tone transformation tools
+  - `english/tone-rewriter.html` - English version
+  - `norwegian/tone-rewriter-norwegian.html` - Norwegian version (Toneomskriver)
 
 ### Todo Apps
 - **todo-app** - Basic vanilla JavaScript todo application
@@ -61,7 +62,7 @@ python main.py
    - Generate an API key
 
 2. **Setup the tools**
-   - Open `tone-rewriter.html` or `tone-rewriter-norwegian.html`
+   - Open `tone-rewriter/english/tone-rewriter.html` or `tone-rewriter/norwegian/tone-rewriter-norwegian.html`
    - Replace `'YOUR_API_KEY_HERE'` with your actual API key
    - Open the file in any modern web browser
 
