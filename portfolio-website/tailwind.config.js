@@ -34,6 +34,21 @@ module.exports = {
           900: 'rgb(var(--color-accent-900) / <alpha-value>)',
           950: 'rgb(var(--color-accent-950) / <alpha-value>)',
         },
+        success: {
+          50: 'rgb(var(--color-success-50) / <alpha-value>)',
+          500: 'rgb(var(--color-success-500) / <alpha-value>)',
+          600: 'rgb(var(--color-success-600) / <alpha-value>)',
+        },
+        error: {
+          50: 'rgb(var(--color-error-50) / <alpha-value>)',
+          500: 'rgb(var(--color-error-500) / <alpha-value>)',
+          600: 'rgb(var(--color-error-600) / <alpha-value>)',
+        },
+        warning: {
+          50: 'rgb(var(--color-warning-50) / <alpha-value>)',
+          500: 'rgb(var(--color-warning-500) / <alpha-value>)',
+          600: 'rgb(var(--color-warning-600) / <alpha-value>)',
+        },
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',
